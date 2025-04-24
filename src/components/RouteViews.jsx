@@ -5,6 +5,7 @@ import AboutUs from '../pages/AboutUs.jsx';
 import Contact from '../pages/Contact.jsx';
 import NotFound from '../pages/NotFound.jsx';
 import Footer from './Footer.jsx';
+import OilExtractor from '../pages/OilExtractor.jsx';
 import Navigationbar from './NavigationBar.jsx';
 
 const RouteViews = () => {
@@ -16,6 +17,7 @@ const RouteViews = () => {
           <Route path="/" element={<Home />} />
           <Route path="/aboutus" element={<AboutUs />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/oilextractor" element={<OilExtractor />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </div>

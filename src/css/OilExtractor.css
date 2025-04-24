@@ -1,0 +1,94 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  background: #000;
+  font-family: sans-serif;
+}
+
+.main-content {
+  padding-top: 60px; /* Ajusta esto según la altura de tu Navbar */
+}
+
+canvas {
+  width: 100%;
+  height: calc(100vh - 60px); /* 100% de la ventana menos el Navbar */
+  display: block;
+}
+
+#controls {
+  position: fixed;
+  top: 70px; /* debajo del navbar */
+  right: 10px;
+  display: grid;
+  grid-template-areas:
+    ". up ."
+    "left mid right"
+    ". down .";
+  gap: 5px;
+  z-index: 10;
+}
+
+#up {
+  grid-area: up;
+}
+
+#down {
+  grid-area: down;
+}
+
+#left {
+  grid-area: left;
+}
+
+#right {
+  grid-area: right;
+}
+
+#direction {
+  grid-area: mid;
+}
+
+#configuracion {
+  position: fixed;
+  top: 70px; /* debajo del navbar */
+  left: 10px;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 10px;
+  border-radius: 8px;
+  z-index: 10;
+}
+
+#up,
+#down,
+#left,
+#right,
+#direction {
+  width: 50px;
+  height: 50px;
+  font-size: 20px;
+  text-align: center;
+  padding: 0;
+  border: none;
+  background-color: #eee;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#controls button:hover {
+  background-color: #ddd;
+}
+
+#info {
+  position: fixed;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 18px;
+  z-index: 10;
+}
